@@ -1,10 +1,11 @@
 var React = require('react');
 var enzyme = require('enzyme');
-var Promise = require('bluebird');
+var Adapter = require('enzyme-adapter-react-16');
 
+var Promise = require('bluebird');
 var Component = require('../src/Component');
 
-
+enzyme.configure({ adapter: new Adapter() });
 var mount = enzyme.mount;
 
 
@@ -79,6 +80,9 @@ describe('<EasterEgg />', function() {
 
     return new Promise(function(resolveAll) {
       return new Promise(function(resolve) {
+
+        console.log(page);
+        console.log(page.wrapper());
         expect(page.wrapper().contains(child)).toEqual(false);
 
         document.dispatchEvent(new KeyboardEvent('keydown', {'key': 't'}));
@@ -90,6 +94,8 @@ describe('<EasterEgg />', function() {
           resolve();
         }, 500);
       }).then(function() {
+        console.log(page);
+        console.log(page.wrapper());
         expect(page.wrapper().contains(child)).toEqual(true);
         setTimeout(function() {
           resolveAll();

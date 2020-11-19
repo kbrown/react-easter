@@ -1,16 +1,17 @@
 var React = require('react');
-
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
 var HotKey = require('react-shortcut');
 
 
-module.exports = React.createClass({
+module.exports = createReactClass({
   propTypes: {
-    keys: React.PropTypes.array,
-    simultaneous: React.PropTypes.bool,
-    timeout: React.PropTypes.number,
-    children: React.PropTypes.oneOfType([
-      React.PropTypes.array,
-      React.PropTypes.element
+    keys: PropTypes.array,
+    simultaneous: PropTypes.bool,
+    timeout: PropTypes.number,
+    children: PropTypes.oneOfType([
+      PropTypes.array,
+      PropTypes.element
     ])
   },
 

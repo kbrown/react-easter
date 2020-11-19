@@ -4,5 +4,5 @@ test
 *.log
 .eslintrc
 .eslintignore
-.jestrc
+jest.config.js
 .travis.yml

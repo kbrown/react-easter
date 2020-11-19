@@ -4,8 +4,8 @@
   "description": "Easily add easter eggs to your React app",
   "main": "src/Component.js",
   "scripts": {
-    "test": "NODE_ENV=test jest -u --no-cache --config .jestrc",
-    "test:coverage": "NODE_ENV=test jest --coverage --no-cache --config .jestrc",
+    "test": "NODE_ENV=test jest -u --no-cache --config ./jest.config.json",
+    "test:coverage": "NODE_ENV=test jest --coverage --no-cache --config ./jest.config.json",
     "lint": "eslint --config .eslintrc --ext .js .",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "codeclimate": "cat ./coverage/lcov.info | codeclimate-test-reporter",
@@ -41,22 +41,22 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "0.4.0",
-    "coveralls": "2.11.15",
+    "coveralls": "^3.1.0",
     "enzyme": "^2.7.1",
+    "enzyme-adapter-react-16": "^1.15.5",
     "eslint": "3.14.1",
     "eslint-config-airbnb-base": "11.0.1",
     "eslint-plugin-import": "2.2.0",
     "husky": "0.13.1",
-    "jest": "^19.0.2",
-    "react-addons-test-utils": "^15.4.2",
-    "sinon": "^1.17.7"
+    "jest": "^26.6.3"
   },
   "dependencies": {
-    "bluebird": "3.4.7",
+    "bluebird": "3.7.2",
+    "create-react-class": "^15.7.0",
     "lodash": "^4.17.4",
-    "react": "15.4.2",
-    "react-dom": "^15.4.2",
-    "react-shortcut": "1.0.6"
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-shortcut": "2.1.0"
   },
   "engines": {
     "node": ">= 4",

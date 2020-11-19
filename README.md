@@ -118,7 +118,7 @@ Library has ~100% test coverage:
 $ npm run test:coverage
 
 > react-easter@1.0.0 test:coverage ~/projects/react-easter
-> NODE_ENV=test jest --coverage --no-cache --config .jestrc
+> NODE_ENV=test jest --coverage --no-cache --config ./jest.config.json
 
  PASS  test/Component.js
   <EasterEgg />
